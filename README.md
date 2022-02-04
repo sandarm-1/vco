@@ -44,4 +44,14 @@ Show table of Kvco for each Design point.
 Summary
 --------
 Show curves of F vs V for all design points so far.
-Looks like design with mirrors at 1.6u/0.18u and min length inverters may be an ok tradeoff for relatively high speed, and oscillator internal phases not too distorted.
+* Looks like design with mirrors at 1.6u/0.18u and min length inverters may be an ok tradeoff for relatively high speed, and oscillator internal phases not too distorted.
+* Possibly reduce mirror ratio to help reduce duty cycle distortion a bit without losing too much speed.
+
+Further work:
+* Rising edge is slower, look into making PMOS stronger than NMOS in delay cells.
+
+* Maybe that way we can square the waveform better, and from there maybe we can try to go even faster with larger W on delay cells? But drain capacitance may increase and thus reduce speed? So perhaps the way to go from there may be increase mirror ratio.
+
+* Also look at reducing inverter W, since that may reduce drain cap, if that dominates speed then speed may go up
+
+* But can it drive the output buffer then? Maybe reduce output buffer 1st stage... Investigate effect of output buffer. More strength better? But more capacitance? So whats the best trade off. Etc.
