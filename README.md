@@ -32,9 +32,9 @@ We can gain some speed at not much current increase.
 But duty cycle starts to distort.
 Not much current increase.
 
-Blue = 3-stage CS-VCO, mirrors 1.29u/.18u, inverters 0.5u/.18u (1.462GHz @ 0.9V Vctrl)
-Purple = 3-stage CS-VCO, mirrors 1.6u/.18u, inverters 0.5u/.18u (1.695GHz @ 0.9V Vctrl)
-Pink = 3-stage CS-VCO, mirrors 2.4u/.18u, inverters 0.5u/.18u (2.068GHz @ 0.9V Vctrl)
+* Blue = 3-stage CS-VCO, mirrors 1.29u/.18u, inverters 0.5u/.18u (1.462GHz @ 0.9V Vctrl)
+* Purple = 3-stage CS-VCO, mirrors 1.6u/.18u, inverters 0.5u/.18u (1.695GHz @ 0.9V Vctrl)
+* Pink = 3-stage CS-VCO, mirrors 2.4u/.18u, inverters 0.5u/.18u (2.068GHz @ 0.9V Vctrl)
 
 ![image](https://user-images.githubusercontent.com/95447782/152638679-bf99ab79-a2ef-4ce9-96f7-176f2dee13d7.png)
 
@@ -50,34 +50,61 @@ Pink = 3-stage CS-VCO, mirrors 2.4u/.18u, inverters 0.5u/.18u (2.068GHz @ 0.9V V
 ![image](https://user-images.githubusercontent.com/95447782/152638736-9f5acc31-cad4-4307-8fc7-ea8dd6436e4b.png)
 
 
-
+Takeaway:
 Hence increasing current mirror ratio can help increase frequency and Kvco.
 
 
 
 
-Increasing inverter drive strength:
+Increasing delay cell inverter drive strength:
 -----
-Making inverters minimum length.
+For a fixed mirror ratio, we show the effect of changing delay cell inverter drive strength (0.18um L vs 0.15um L).
+
+Increasing delay cell inverters drive strength (reducing L from 0.18u to 0.15u)
+
+* Blue = 3-stage CS-VCO, mirrors 1.6u/.18u, inverters 0.5u/.15u (2.16GHz)
+* Green = 3-stage CS-VCO, mirrors 2.4u/.18u, inverters 0.5u/.15u (2.64GHz)
+
+![image](https://user-images.githubusercontent.com/95447782/152638828-c01e81c4-7ec4-4877-a6c4-71a90fd05a42.png)
+
+
+Takeaway:
+Making inverters minimum length can benefit high frequency operation.
+Frequency goes up significantly.
+But duty cycle starts to distort.
+And peak to peak swing goes down significantly (specially if mirror ratio also increased).
 
 Leakage not much of a concern since top and bottom mirror devices are 0.18um length.
 
-For a fixed mirror ratio, show effect of changing inverter drive strength (0.18um L vs 0.15um L).
 
-Freq goes up significantly.
-
-But duty cycle starts to distort.
-And peak to peak swing goes down significantly (if mirror ratio also increased).
 
 
 Kvco:
 --------
-Show table of Kvco for each Design point.
+Table of Kvco for each Design point.
+
+|Design Point|			Kvco|
+|------------|------------|
+|mirrors 1.29u/.18u|			5.27E+09 Hz/V|
+|mirrors 1.6u/.18u|			5.62E+09 Hz/V|
+|mirrors 2.4u/.18u|			5.65E+09 Hz/V|
+|mirrors 1.6u/.18u, invs 0.5u/.15u|			6.73E+09 Hz/V|
+|mirrors 2.4u/.18u, invs 0.5u/.15u|			6.63E+09 Hz/V|
+
+![image](https://user-images.githubusercontent.com/95447782/152638918-b112174d-7f43-41e1-9e05-8159bac787ab.png)
+
+
 
 
 Summary
 --------
-Show curves of F vs V for all design points so far.
+F vs Vctrl for various design points so far:
+![image](https://user-images.githubusercontent.com/95447782/152638931-341f046e-7443-44dc-8cd2-3050ec599e56.png)
+
+Current consumption vs Vctrl:
+![image](https://user-images.githubusercontent.com/95447782/152638934-b6bda38d-de88-48fe-9ace-bc7f6dfe32f5.png)
+
+
 * Looks like design with mirrors at 1.6u/0.18u and min length inverters may be an ok tradeoff for relatively high speed, and oscillator internal phases not too distorted.
 * Possibly reduce mirror ratio to help reduce duty cycle distortion a bit without losing too much speed.
 
