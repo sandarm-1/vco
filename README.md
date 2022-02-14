@@ -188,10 +188,36 @@ Kvco:
 **Notes / Further work:**
 * These are pre-layout numbers. Will come down with post-layout extraction.
 * This frequency is achieved with a load on the output of the VCO that represents a divide-by-two circuit that would be present as part of the feedback in a PLL system.
-* In current design, oscillator needs Vctrl higher than 0.8V to oscillate. Limiting factor here is vco core internal node voltage swing when current is starved.
+* In current design, oscillator needs Vctrl higher than 0.8V to oscillate. Limiting factor here is vco core internal node voltage swing too low when delay cells are current starved.
 
 
 
+Loss of oscillation at low Vctrl:
+---
+At Vctrl < 0.8V, oscillation lost. Limiting factor here is vco core internal node voltage swing too low when delay cells are current starved.
 
+These are net10, net11, net12:
+
+![image](https://user-images.githubusercontent.com/95447782/153843104-77f62832-470c-443b-82ba-4ff68a1fbfad.png)
+
+This is Vctrl = 0.8V, output swing ok, internal net10, net11, net12 swing ok. Net10 swings from 0.08V to 1.27V, hence it can trigger the 1st inverter of the output buffer.
+
+![image](https://user-images.githubusercontent.com/95447782/153843171-a8fbdd4a-fc78-4a65-b0ab-7c5ead731542.png)
+
+
+This is Vctrl = 0.7V, node10 voltage swing too low to trigger next inverter (net10 only reaches 0.96V briefly at its peak).
+
+![image](https://user-images.githubusercontent.com/95447782/153843214-0d22e43b-cc9d-4999-b172-34aa5bf6c411.png)
+
+
+
+How to fix (to recover oscillation at Vctrl < 0.8V):
+* More current in current mirrors?
+* Min length current mirror devices (less resistive)?
+* Swing recovery techniques? (circuit topology change)
+
+How to hack/workaround:
+* Voltage shifting before Vctrl? Create Vctrl_2 = Vctrl + delta,  or Vctrl_2 = a * Vctrl + b
+* Just live with it?
 
 
