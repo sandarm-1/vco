@@ -96,7 +96,7 @@ Table of Kvco for each Design point.
 
 
 
-Summary
+Design comparison at this point:
 --------
 F vs Vctrl for various design points so far:
 ![image](https://user-images.githubusercontent.com/95447782/152638931-341f046e-7443-44dc-8cd2-3050ec599e56.png)
