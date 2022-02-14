@@ -125,14 +125,43 @@ Optimization of delay cell dimensions:
 We can try to gain speed with larger W on delay cells (more drive strength, able to charge capacitance faster)? But drain capacitance may increase and thus reduce speed? So perhaps the way to go may be reducing inverter W, since that may reduce drain cap, if that dominates speed then speed may go up.
 
 **Sweep of delay cell pmos & nmos dimensions:**
+![image](https://user-images.githubusercontent.com/95447782/153833100-61898cc3-aed9-4b16-8373-251d48693439.png)
+
+So, Fvco goes up with smaller delay cell devices, as expected, due to lower capacitance in the internal nodes of the ring oscillator.
+Also skewing the PMOS versus the NMOS helps improve speed.
+Best speed is achieved at *0.5um/0.15um PMOS and 0.36um/0.15um NMOS* device dimensions for the ring oscillator delay cells.
 
 
-
-From there maybe we can try to increase current mirror ratio.
 
 Output buffer optimization:
 ---
 The load capacitance presented by the output buffer to the ring oscillator reduces operating speed. Can the ring oscillator drive the output buffer fast enough? Maybe reduce output buffer 1st stage. Investigate effect of output buffer on speed. More strength better? But more capacitance? So what's the best trade off?
+
+This is the output buffer topology before optimization:
+![image](https://user-images.githubusercontent.com/95447782/153834407-630b7a6f-19c6-4860-a134-a0bce4a906a5.png)
+
+We find out best trade-off for 1st stage of output buffer, since that's what loads the ring oscillator core.
+**Fvco Vs size of 1st stage of output buffer**
+![image](https://user-images.githubusercontent.com/95447782/153834112-7c89af89-1522-45b2-9abf-036fa8603061.png)
+
+We can see the speed gain reducing the gate area attached to the VCO output. But it gets to a point that the 1st stage of the output buffer can't drive the 2nd stage so we loose peak to peak swing.
+
+This is what the waveform looks like for the near-3 GHz design points:
+Red (3.129 GHz): M21 1.6u/0.15u, M22 0.8u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
+Blue (2.971 GHz): M21 2.0u/0.15u, M22 1.0u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
+Green (2.824 GHz): M21 2.4u/0.15u, M22 1.2u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
+
+![image](https://user-images.githubusercontent.com/95447782/153835006-5d7288dd-e287-4573-a5d9-e00535ec2256.png)
+
+But so far we can't reduce M21 and M22 under 1.2um PMOS and 0.6um NMOS width without losing the output swing.
+
+So, in order to increase speed as much as possible, we insert an intermediate stage in the output buffer, hence we can keep reducing the 1st stage while at the same time recovering the peak to peak swing at the output.
+![image](https://user-images.githubusercontent.com/95447782/153835200-34cb885b-65c9-4766-95bd-37859dc6f3ba.png)
+
+With this change, we can keep reducing M21 and M22 in the 1st stage of the output buffer. We can go as low as 0.58um PMOS and 0.36um NMOS width.
+
+
+
 
 
 
