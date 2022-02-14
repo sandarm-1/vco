@@ -159,9 +159,31 @@ So, in order to increase speed as much as possible, we insert an intermediate st
 ![image](https://user-images.githubusercontent.com/95447782/153835200-34cb885b-65c9-4766-95bd-37859dc6f3ba.png)
 
 With this change, we can keep reducing M21 and M22 in the 1st stage of the output buffer. We can go as low as 0.58um PMOS and 0.36um NMOS width.
+We call this design point **DP5 --> 4.11GHz oscillating frequency at 0.9Vctrl, typical corner, VDD = 1.8V.**
+	
+![image](https://user-images.githubusercontent.com/95447782/153836151-d83eb80c-111b-47a5-89bb-4dce3eb79970.png)
 
 
+Output waveform for DP5 at 4.11GHz at 0.9V Vctrl:
+![image](https://user-images.githubusercontent.com/95447782/153836337-e5964f33-1def-4320-ae21-2ef2d1c5443d.png)
 
+
+Fvco Vs Vctrl for DP5:
+===
+This is Fvco Vs Vctrl for the design point called DP5, versus previous design iterations (to see the evolution through the design optimization process):
+![image](https://user-images.githubusercontent.com/95447782/153836578-7e8d3f68-c3d2-4058-b8eb-e5fe2080424e.png)
+
+Supply current:
+![image](https://user-images.githubusercontent.com/95447782/153836609-8784f1f0-6e8e-4350-86d3-edc6ca1d1710.png)
+
+Kvco:
+![image](https://user-images.githubusercontent.com/95447782/153836661-e5ed1312-3dc4-438f-bde6-545ac66fa0d4.png)
+
+
+**Notes / Further work:**
+* These are pre-layout numbers. Will come down with post-layout extraction.
+* This frequency is achieved with a load on the output of the VCO that represents a divide-by-two circuit that would be present as part of the feedback in a PLL system.
+* In current design, oscillator needs Vctrl higher than 0.8V to oscillate. Limiting factor here is vco core internal node voltage swing when current is starved.
 
 
 
