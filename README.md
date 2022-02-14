@@ -150,11 +150,11 @@ We can see the speed gain reducing the gate area attached to the VCO output. But
 
 This is what the waveform looks like for the near-3 GHz design points:
 
-Red (3.129 GHz): M21 1.6u/0.15u, M22 0.8u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
+* Red (3.129 GHz): M21 1.6u/0.15u, M22 0.8u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
 
-Blue (2.971 GHz): M21 2.0u/0.15u, M22 1.0u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
+* Blue (2.971 GHz): M21 2.0u/0.15u, M22 1.0u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
 
-Green (2.824 GHz): M21 2.4u/0.15u, M22 1.2u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
+* Green (2.824 GHz): M21 2.4u/0.15u, M22 1.2u/0.15u, delay cell pmos and nmos are kept as 0.5u/0.15u, mirrors 2.4u/.18u.
 
 ![image](https://user-images.githubusercontent.com/95447782/153835006-5d7288dd-e287-4573-a5d9-e00535ec2256.png)
 
