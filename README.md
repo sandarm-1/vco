@@ -122,13 +122,15 @@ Rising edge is slower than falling edge, look into making PMOS stronger than NMO
 
 Optimization of delay cell dimensions:
 ---
-We can try to gain speed with larger W on delay cells (more drive strength, able to charge capacitance faster)? But drain capacitance may increase and thus reduce speed? So perhaps the way to go may be reducing inverter W, since that may reduce drain cap, if that dominates speed then speed may go up.
+Can we increase oscillation speed with larger W on delay cells (more drive strength, able to charge capacitance faster)? But then drain capacitance will increase thus reducing speed? So probably the way to go is to reduce inverter W, since that may reduce drain cap, if that dominates speed then speed may go up.
 
 **Sweep of delay cell pmos & nmos dimensions:**
 ![image](https://user-images.githubusercontent.com/95447782/153833100-61898cc3-aed9-4b16-8373-251d48693439.png)
 
 So, Fvco goes up with smaller delay cell devices, as expected, due to lower capacitance in the internal nodes of the ring oscillator.
+
 Also skewing the PMOS versus the NMOS helps improve speed.
+
 Best speed is achieved at *0.5um/0.15um PMOS and 0.36um/0.15um NMOS* device dimensions for the ring oscillator delay cells.
 
 
