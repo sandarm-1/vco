@@ -51,7 +51,7 @@ Layout optimization techniques done to minimize capacitance on critical nets:
 
 However despite these local layout optimizations we eventually hit a wall and we couldn't make the VCO any faster with the initial circuit architecture.
 
-Fundamentally the initial design was limited by the circuit topology: 3 current starved cells topology was limiting the maximum VCO frequency.
+**Fundamentally the initial design was limited by the circuit topology: 3 current starved cells topology was limiting the maximum VCO frequency.**
 
 
 
