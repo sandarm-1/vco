@@ -22,7 +22,7 @@ Then we saw the frequency dropped to to 1.8GHz in Pre-layout simulation with bac
 
 This result was much more in line with the post-layout result.
 
-Plot of the drop from 4GHz (pre-layout with no parasitic caps) to 1.5GHz (full layout extracted netlist), then back up to 1.8GHz (pre-layout with back annotated parasitic caps):
+Plot of the drop from 4GHz (DP5 pre-layout with no parasitic caps) to 1.5GHz (full layout extracted netlist), then back up to 1.8GHz (pre-layout with back annotated parasitic caps):
 
 ![image](https://user-images.githubusercontent.com/95447782/155850939-ce73f9ae-32ef-4c61-b42a-ab32810a30aa.png)
 
@@ -40,7 +40,7 @@ And these are the corresponding tracks in the initial layout:
 
 After this we performed a significant amount of layout optimization to reduce parasitic capacitance on these critical nets in the ring oscillator.
 
-With layout optimization techniques we managed to speed it up a bit, reaching just **over 2GHz at 0.9V Vctrl** with the same circuit topology. However we wanted to increase this further.
+With layout optimization techniques we managed to speed it up a bit, reaching just **over 2GHz at 0.9V Vctrl** with the same circuit topology, post-layout. However we wanted to increase this further.
 
 Layout optimization techniques done to minimize capacitance on critical nets:
 * Edited transistor Pcells to make Source and Drain contacts/LI straps slightly further apart without breaking DRC (further away tracks = less S to D capacitance)
@@ -93,6 +93,33 @@ Post-Layout sim results (VCO with 1 current-starved cell, DP9)
 Fvco Vs Vctrl: (showing two options for the current mirrors, as we intend to add current programmability for test purposes)
 
 ![image](https://user-images.githubusercontent.com/95447782/155853118-202d4f89-0556-44f9-9e5c-0159e0194455.png)
+
+Fvco @ 0.9V Vctrl = 3.566GHz.
+
+ |	Vctrl (V)	 |	Fvco (Hz)	 |	I_supply (Arms)	 |
+ |	-----	 |	-----	 |	-----	 |
+ |	0.7	 |	1.628E+09	 |		 |
+ |	0.8	 |	2.939E+09	 |		 |
+ |	0.9	 |	3.556E+09	 |		 |
+ |	1	 |	3.787E+09	 |		 |
+ |	1.1	 |	3.872E+09	 |		 |
+ |	1.2	 |	3.915E+09	 |		 |
+ |	1.3	 |	3.928E+09	 |		 |
+ |	1.4	 |	3.947E+09	 |		 |
+ |	1.5	 |	3.957E+09	 |		 |
+ |	1.6	 |	3.960E+09	 |		 |
+ |	1.7	 |	3.972E+09	 |		 |
+ |	1.8	 |	3.971E+09	 |		 |
+
+
+
+
+
+Output waveform for DP9 post-layout, 3.566GHz at 0.9V Vctrl.
+
+*WAVEFORM HERE*
+
+
 
 Kvco:
 
