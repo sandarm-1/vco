@@ -68,6 +68,26 @@ The circuit proposed is equivalent to a buffer with positive feedback with one v
 ![image](https://user-images.githubusercontent.com/95447782/155852210-26125757-1e2d-4189-bf13-cf728838c905.png)
 
 
+For this to work it requires balancing the ring osc stages properly.
+The starved cell one must be relatively small as this is the critical path for maximum speed operation.
+The intermediate stage must be small also, as it’s the load for the starved cell.
+The 3rd stage must be larger so it can drive the starved cell fast enough.
+
+
+With this circuit topology, we went through an iterative optimization loop to optimize the key components of the VCO for relatively high speed:
+* Optimizing current multiplication factor in current mirrors
+* Optimizing strength of 3rd stage in the ring oscillator
+* Optimizing ring oscillator overall balance of 3 stages
+
+Device dimensions for VCO with 1 current-starved cell (DP9):
+
+![image](https://user-images.githubusercontent.com/95447782/155852569-27e3ee61-9785-4331-8dbd-0c0872f6ec14.png)
+
+Layout of VCO with 1 current-starved cell (DP9):
+
+![image](https://user-images.githubusercontent.com/95447782/155852731-50e7df0f-eb6e-4cec-b07b-8c8d05e78c76.png)
+
+
 
 
 
