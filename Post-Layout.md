@@ -114,24 +114,26 @@ Fvco @ 0.9V Vctrl = 3.566GHz.
 
 
 
-
 Output waveform for DP9 post-layout, 3.566GHz at 0.9V Vctrl.
 
-*WAVEFORM HERE*
+![image](https://user-images.githubusercontent.com/95447782/155856800-6cfce11d-851e-46c0-8259-60d405f05c61.png)
 
 
-
-Kvco:
-
-*KVCO HERE - KVCO HERE*
-
-
-Supply current in operating mode (RMS):
-
-*SUPPLY CURRENT RMS HERE*
-
-
+Programmable bias current:
+---------------
 Plan is to tapeout with current scaling options so we will have both high current - high speed options and lower current - lower speed options.
+
+This is Fvco, Current and Kvco for different bias currents:
+
+![image](https://user-images.githubusercontent.com/95447782/155856852-502e37cd-547e-4f04-b14b-38392db00f19.png)
+
+
+This is Kvco Vs bias current:
+
+![image](https://user-images.githubusercontent.com/95447782/155856869-b7bdd7b6-43c4-4bb7-91de-5a3c5eefae02.png)
+
+
+
 
 Summary:
 -------------
@@ -139,6 +141,7 @@ DP9 post-layout can achieve:
 0.5x current mode --> 2.867GHz @ 0.9V Vctrl, 356uA rms, Kvco 6.064GHz/V
 1x current mode --> 3.566GHz @ 0.9V Vctrl, 444uA rms, Kvco 4.206GHz/V
 2x current mode --> 3.883GHz @ 0.9V Vctrl, 459uA rms, Kvco 7.659GHz/V
+
 
 
 Next steps:
