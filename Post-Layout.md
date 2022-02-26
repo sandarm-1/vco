@@ -55,7 +55,7 @@ Fundamentally the initial design was limited by the circuit topology: 3 current 
 
 
 
-Circuit changes to increase speed
+Circuit changes to recover speed
 ------
 The original circuit architecture was fundamentally limited by the use of 3 current-starved delay cells in the ring oscillator.
 
@@ -86,6 +86,34 @@ Device dimensions for VCO with 1 current-starved cell (DP9):
 Layout of VCO with 1 current-starved cell (DP9):
 
 ![image](https://user-images.githubusercontent.com/95447782/155852731-50e7df0f-eb6e-4cec-b07b-8c8d05e78c76.png)
+
+
+Post-Layout sim results (VCO with 1 current-starved cell, DP9)
+---------
+Fvco Vs Vctrl: (showing two options for the current mirrors, as we intend to add current programmability for test purposes)
+
+![image](https://user-images.githubusercontent.com/95447782/155853118-202d4f89-0556-44f9-9e5c-0159e0194455.png)
+
+Kvco:
+
+*KVCO HERE - KVCO HERE*
+
+
+Supply current in operating mode (RMS):
+
+*SUPPLY CURRENT RMS HERE*
+
+
+Plan is to tapeout with current scaling options so we will have both high current - high speed options and lower current - lower speed options.
+
+
+Next steps:
+-------------
+* Post-layout design review
+* PSS sims
+* Corner sims (A lot of characterization could be done across corners, however, perhaps could focus now on pipecleaning tapeout process and do corners after that)?
+* Start to prepare for tapeout: put in current test modes, freq dividers, prepare for tapeout, pipeclean, characterize across corners maybe later?
+
 
 
 
