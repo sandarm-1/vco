@@ -61,7 +61,13 @@ The original circuit architecture was fundamentally limited by the use of 3 curr
 
 The proposed improved architecture to speed up the VCO uses only one current-starved delay cell and two non-starved cells (i.e. standard inverters).
 
-This is equivalent to a buffer with positive feedback with one voltage-controlled delay cell in the feedback line. The standard inverters not only switch faster than equivalent current-starved cells but also they provide full rail to rail swing at their output hence creating a higher overdrive voltage at the gate of the starved cell, increasing operating speed and extending control voltage range.
+![image](https://user-images.githubusercontent.com/95447782/155852188-53bcd6bf-f415-45a9-b41e-0f4d696cd764.png)
+
+The circuit proposed is equivalent to a buffer with positive feedback with one voltage-controlled delay cell in the feedback line. The standard inverters not only switch faster than equivalent current-starved cells but also they provide full rail to rail swing at their output hence creating a higher overdrive voltage at the gate of the starved cell, increasing operating speed and extending control voltage range.
+
+![image](https://user-images.githubusercontent.com/95447782/155852210-26125757-1e2d-4189-bf13-cf728838c905.png)
+
+
 
 
 
