@@ -144,9 +144,13 @@ This is Kvco Vs bias current:
 Summary:
 -------------
 DP9 post-layout can achieve:
+
 0.5x current mode --> 2.867GHz @ 0.9V Vctrl, 356uA rms, Kvco 6.064GHz/V
+
 1x current mode --> 3.566GHz @ 0.9V Vctrl, 444uA rms, Kvco 4.206GHz/V
+
 2x current mode --> 3.883GHz @ 0.9V Vctrl, 459uA rms, Kvco 7.659GHz/V
+
 
 
 Making devices larger:
