@@ -94,7 +94,7 @@ Fvco Vs Vctrl: (showing two options for the current mirrors, as we intend to add
 
 ![image](https://user-images.githubusercontent.com/95447782/155853118-202d4f89-0556-44f9-9e5c-0159e0194455.png)
 
-Fvco @ 0.9V Vctrl = 3.566GHz.
+Fvco @ 0.9V Vctrl = 3.556GHz.
 
 |	Vctrl (V)	|	Fvco (Hz)	|	I_supply (Arms)	|
 |	-----	|	-----	|	-----	|
