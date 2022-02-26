@@ -140,6 +140,7 @@ Next steps:
 * PSS sims
 * Corner sims (A lot of characterization could be done across corners, however, perhaps could focus now on pipecleaning tapeout process and do corners after that)?
 * Start to prepare for tapeout: put in current test modes, freq dividers, prepare for tapeout, pipeclean, characterize across corners maybe later?
+* Beef up layout tracks that may be carrying high currents (without degrading speed)
 
 
 
