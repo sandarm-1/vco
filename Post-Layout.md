@@ -56,7 +56,7 @@ Fundamentally the initial design was limited by the circuit topology: 3 current 
 
 
 Circuit changes to recover speed
-------
+====
 The original circuit architecture was fundamentally limited by the use of 3 current-starved delay cells in the ring oscillator.
 
 The proposed improved architecture to speed up the VCO uses only one current-starved delay cell and two non-starved cells (i.e. standard inverters).
@@ -145,11 +145,11 @@ Summary:
 -------------
 DP9 post-layout can achieve:
 
-0.5x current mode --> 2.867GHz @ 0.9V Vctrl, 356uA rms, Kvco 6.064GHz/V
+0.5x current mode --> **2.867GHz @ 0.9V Vctrl, 356uA rms, Kvco 6.064GHz/V**
 
-1x current mode --> 3.566GHz @ 0.9V Vctrl, 444uA rms, Kvco 4.206GHz/V
+1x current mode --> **3.566GHz @ 0.9V Vctrl, 444uA rms, Kvco 4.206GHz/V**
 
-2x current mode --> 3.883GHz @ 0.9V Vctrl, 459uA rms, Kvco 7.659GHz/V
+2x current mode --> **3.883GHz @ 0.9V Vctrl, 459uA rms, Kvco 7.659GHz/V**
 
 
 
@@ -163,7 +163,7 @@ However the achieved frequency of the VCO would be much lower.
 
 This would be the design with all devices made larger:
 
-![image](https://user-images.githubusercontent.com/95447782/155857101-b1b52589-8a59-4a8c-9834-9fc9deb31449.png)
+![image](https://user-images.githubusercontent.com/95447782/155857374-28f4c1ac-a3c7-49db-a3bd-1e72cb7d1bef.png)
 
 The speed would be much lower:
 
@@ -175,7 +175,7 @@ The speed would be much lower:
 
 
 Next steps:
--------------
+====
 * Post-layout design review
 * PSS sims
 * Corner sims (A lot of characterization could be done across corners, however, perhaps could focus now on pipecleaning tapeout process and do corners after that)?
