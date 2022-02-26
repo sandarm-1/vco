@@ -96,21 +96,27 @@ Fvco Vs Vctrl: (showing two options for the current mirrors, as we intend to add
 
 Fvco @ 0.9V Vctrl = 3.566GHz.
 
- |	Vctrl (V)	 |	Fvco (Hz)	 |	I_supply (Arms)	 |
- |	-----	 |	-----	 |	-----	 |
- |	0.7	 |	1.628E+09	 |		 |
- |	0.8	 |	2.939E+09	 |		 |
- |	0.9	 |	3.556E+09	 |		 |
- |	1	 |	3.787E+09	 |		 |
- |	1.1	 |	3.872E+09	 |		 |
- |	1.2	 |	3.915E+09	 |		 |
- |	1.3	 |	3.928E+09	 |		 |
- |	1.4	 |	3.947E+09	 |		 |
- |	1.5	 |	3.957E+09	 |		 |
- |	1.6	 |	3.960E+09	 |		 |
- |	1.7	 |	3.972E+09	 |		 |
- |	1.8	 |	3.971E+09	 |		 |
-
+¦	Vctrl (V)	¦	Fvco (Hz)	¦	I_supply (Arms)	¦
+¦	-----	¦	-----	¦	-----	¦
+¦	0	¦		¦	25.314E-06	¦
+¦	0.1	¦		¦	31.579E-06	¦
+¦	0.2	¦		¦	33.940E-06	¦
+¦	0.3	¦		¦	26.301E-06	¦
+¦	0.4	¦		¦	16.531E-06	¦
+¦	0.5	¦		¦	70.454E-06	¦
+¦	0.6	¦		¦	91.307E-06	¦
+¦	0.7	¦	1.628E+09	¦	228.230E-06	¦
+¦	0.8	¦	2.939E+09	¦	395.843E-06	¦
+¦	0.9	¦	3.556E+09	¦	444.171E-06	¦
+¦	1	¦	3.787E+09	¦	477.452E-06	¦
+¦	1.1	¦	3.872E+09	¦	514.205E-06	¦
+¦	1.2	¦	3.915E+09	¦	528.857E-06	¦
+¦	1.3	¦	3.928E+09	¦	540.069E-06	¦
+¦	1.4	¦	3.947E+09	¦	565.461E-06	¦
+¦	1.5	¦	3.957E+09	¦	551.524E-06	¦
+¦	1.6	¦	3.960E+09	¦	555.120E-06	¦
+¦	1.7	¦	3.972E+09	¦	558.213E-06	¦
+¦	1.8	¦	3.971E+09	¦	560.065E-06	¦
 
 
 
@@ -141,6 +147,26 @@ DP9 post-layout can achieve:
 0.5x current mode --> 2.867GHz @ 0.9V Vctrl, 356uA rms, Kvco 6.064GHz/V
 1x current mode --> 3.566GHz @ 0.9V Vctrl, 444uA rms, Kvco 4.206GHz/V
 2x current mode --> 3.883GHz @ 0.9V Vctrl, 459uA rms, Kvco 7.659GHz/V
+
+
+Making devices larger:
+------------
+Also tried a design where all the devices that switch at high speed are at least 2x minimum width & 2x minimum length.
+
+This would be with the intention to avoid reliability/lifetime concerns due to devices switching at high speeds.
+
+However the achieved frequency of the VCO would be much lower.
+
+This would be the design with all devices made larger:
+
+![image](https://user-images.githubusercontent.com/95447782/155857101-b1b52589-8a59-4a8c-9834-9fc9deb31449.png)
+
+The speed would be much lower:
+
+![image](https://user-images.githubusercontent.com/95447782/155857219-425b85cf-c7c8-469f-8ae6-5f7c0eaf3d35.png)
+
+
+
 
 
 
