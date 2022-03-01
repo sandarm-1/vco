@@ -90,9 +90,11 @@ Layout of VCO with 1 current-starved cell (DP9):
 
 Post-Layout sim results (VCO with 1 current-starved cell, DP9)
 ---------
-Fvco Vs Vctrl: (showing two options for the current mirrors, as we intend to add current programmability for test purposes)
+Fvco Vs Vctrl: (showing three options for the current mirrors, as we intend to add current programmability for test purposes)
 
-![image](https://user-images.githubusercontent.com/95447782/155853118-202d4f89-0556-44f9-9e5c-0159e0194455.png)
+![image](https://user-images.githubusercontent.com/95447782/156153173-0ecfea27-ed00-49c4-842e-fd1723eef90e.png)
+
+
 
 Fvco @ 0.9V Vctrl = 3.556GHz.
 
@@ -167,8 +169,7 @@ This would be the design with all devices made larger:
 
 The speed would be much lower:
 
-![image](https://user-images.githubusercontent.com/95447782/155857219-425b85cf-c7c8-469f-8ae6-5f7c0eaf3d35.png)
-
+![image](https://user-images.githubusercontent.com/95447782/156153581-36bb6b01-3225-4f07-b9f9-42c81a3de9b1.png)
 
 
 
