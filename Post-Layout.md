@@ -83,62 +83,51 @@ Device dimensions for VCO with 1 current-starved cell (DP9):
 
 ![image](https://user-images.githubusercontent.com/95447782/155852569-27e3ee61-9785-4331-8dbd-0c0872f6ec14.png)
 
-Layout of VCO with 1 current-starved cell (DP9):
+Layout of VCO with 1 current-starved cell (DP9 - including programmable current modes):
 
-![image](https://user-images.githubusercontent.com/95447782/155852731-50e7df0f-eb6e-4cec-b07b-8c8d05e78c76.png)
-
-
-Post-Layout sim results (VCO with 1 current-starved cell, DP9)
----------
-Fvco Vs Vctrl: (showing three options for the current mirrors, as we intend to add current programmability for test purposes)
-
-![image](https://user-images.githubusercontent.com/95447782/156153173-0ecfea27-ed00-49c4-842e-fd1723eef90e.png)
+![VCO_layout_dp9_with_control_ports](https://user-images.githubusercontent.com/95447782/157237491-d3940136-1350-4486-a22b-8a3501f96bc9.png)
 
 
 
-Fvco @ 0.9V Vctrl = 3.556GHz.
-
-|	Vctrl (V)	|	Fvco (Hz)	|	I_supply (Arms)	|
-|	-----	|	-----	|	-----	|
-|	0	|		|	25.314E-06	|
-|	0.1	|		|	31.579E-06	|
-|	0.2	|		|	33.940E-06	|
-|	0.3	|		|	26.301E-06	|
-|	0.4	|		|	16.531E-06	|
-|	0.5	|		|	70.454E-06	|
-|	0.6	|		|	91.307E-06	|
-|	0.7	|	1.628E+09	|	228.230E-06	|
-|	0.8	|	2.939E+09	|	395.843E-06	|
-|	0.9	|	3.556E+09	|	444.171E-06	|
-|	1	|	3.787E+09	|	477.452E-06	|
-|	1.1	|	3.872E+09	|	514.205E-06	|
-|	1.2	|	3.915E+09	|	528.857E-06	|
-|	1.3	|	3.928E+09	|	540.069E-06	|
-|	1.4	|	3.947E+09	|	565.461E-06	|
-|	1.5	|	3.957E+09	|	551.524E-06	|
-|	1.6	|	3.960E+09	|	555.120E-06	|
-|	1.7	|	3.972E+09	|	558.213E-06	|
-|	1.8	|	3.971E+09	|	560.065E-06	|
 
 
-
-VCO output waveform for DP9 post-layout, 3.556GHz at 0.9V Vctrl.
-
-![image](https://user-images.githubusercontent.com/95447782/155856800-6cfce11d-851e-46c0-8259-60d405f05c61.png)
-
-
-Programmable bias current:
+Post-Layout sim results (VCO with 1 current-starved cell, DP9, with programmable bias currents)
 ---------------
 Plan is to tapeout with current scaling options so we will have both high current - high speed options and lower current - lower speed options.
 
-This is Fvco, Current and Kvco for different bias currents:
+The final programmable bias current settings are as follows:
+* x0.125 (mirror size 0.6um)
+* x0.25 (mirror size 1.2um)
+* x0.5 (mirror size 2.4um)
+* x1 (mirror size 4.8um)
+* x2 (mirror size 9.6um)
 
-![image](https://user-images.githubusercontent.com/95447782/155856852-502e37cd-547e-4f04-b14b-38392db00f19.png)
+These are post-layout results Fvco and supply current versus programmable current modes:
+
+![image](https://user-images.githubusercontent.com/95447782/157235442-8e23a6d5-e405-4849-9bee-2820ed8d502b.png)
 
 
-This is Kvco Vs bias current:
+XXXXXXXXXXXXXXXXXXX 
 
-![image](https://user-images.githubusercontent.com/95447782/155856869-b7bdd7b6-43c4-4bb7-91de-5a3c5eefae02.png)
+XXXXXXXXXXXXXXXXXXX VCO output waveform for DP9 post-layout, 3.556GHz at 0.9V Vctrl.
+
+
+![image](https://user-images.githubusercontent.com/95447782/155856800-6cfce11d-851e-46c0-8259-60d405f05c61.png)
+
+XXXXXXXXXXXXXXXXXXX 
+XXXXXXXXXXXXXXXXXXX 
+
+
+Fvco and Current for different bias currents:
+
+![image](https://user-images.githubusercontent.com/95447782/157237708-59b3dd7f-74f1-4f7b-8a6d-24d01c316339.png)
+
+
+
+Kvco Vs bias current (measured between 0.7V and 0.9V Vctrl):
+
+![image](https://user-images.githubusercontent.com/95447782/157235253-d3ed1d04-e867-4759-9469-d4c04b7e8811.png)
+
 
 
 
@@ -147,11 +136,15 @@ Summary:
 -------------
 DP9 post-layout can achieve:
 
-0.5x current mode --> **2.867GHz @ 0.9V Vctrl, 356uA rms, Kvco 6.064GHz/V**
+0.125x current mode --> **2.686GHz @ 0.9V Vctrl, 324uA rms, Kvco 9.328GHz/V (between 0.7V and 0.9V)**
 
-1x current mode --> **3.556GHz @ 0.9V Vctrl, 444uA rms, Kvco 4.206GHz/V**
+0.25x current mode --> **3.208GHz @ 0.9V Vctrl, 386uA rms, Kvco 9.941GHz/V (between 0.7V and 0.9V)**
 
-2x current mode --> **3.883GHz @ 0.9V Vctrl, 459uA rms, Kvco 7.659GHz/V**
+0.5x current mode --> **3.463GHz @ 0.9V Vctrl, 419uA rms, Kvco 8.8GHz/V (between 0.7V and 0.9V)**
+
+1x current mode --> **3.731GHz @ 0.9V Vctrl, 447uA rms, Kvco 8.814GHz/V (between 0.7V and 0.9V)**
+
+2x current mode --> **3.949GHz @ 0.9V Vctrl, 464uA rms, Kvco 6.843GHz/V (between 0.7V and 0.9V)**
 
 
 
@@ -161,15 +154,18 @@ Also tried a design where all the devices that switch at high speed are at least
 
 This would be with the intention to avoid reliability/lifetime concerns due to devices switching at high speeds.
 
-However the achieved frequency of the VCO would be much lower.
+However the achieved frequency of the VCO would be lower and power consumption much larger.
 
 This would be the design with all devices made larger:
 
-![image](https://user-images.githubusercontent.com/95447782/155857374-28f4c1ac-a3c7-49db-a3bd-1e72cb7d1bef.png)
+![image](https://user-images.githubusercontent.com/95447782/157237016-c6fd5c28-1b96-404c-a91f-6d5769128f80.png)
 
-The speed would be much lower:
 
-![image](https://user-images.githubusercontent.com/95447782/156153581-36bb6b01-3225-4f07-b9f9-42c81a3de9b1.png)
+The speed would be lower and current consumption would be significantly higher:
+
+![VCO_large_devices_LVT_pre-layout](https://user-images.githubusercontent.com/95447782/157236440-a8b8dea9-118f-400b-9160-c69509caa16a.png)
+
+
 
 
 
