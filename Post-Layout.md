@@ -1,5 +1,6 @@
 # Post-Layout results
 Post-Layout simulation results of high speed VCO in Skywater 130nm.
+All results typical corner and VDD=1.8V unless otherwise stated.
 
 First VCO layout and initial post-layout simulation results
 ====
@@ -107,15 +108,10 @@ These are post-layout results Fvco and supply current versus programmable curren
 ![image](https://user-images.githubusercontent.com/95447782/157235442-8e23a6d5-e405-4849-9bee-2820ed8d502b.png)
 
 
-XXXXXXXXXXXXXXXXXXX 
+VCO output waveform for DP9 post-layout, 3.731GHz at 0.9V Vctrl.
 
-XXXXXXXXXXXXXXXXXXX VCO output waveform for DP9 post-layout, 3.556GHz at 0.9V Vctrl.
+![image](https://user-images.githubusercontent.com/95447782/157240235-1bb8ed1a-9c0a-45cd-b90a-125087433f65.png)
 
-
-![image](https://user-images.githubusercontent.com/95447782/155856800-6cfce11d-851e-46c0-8259-60d405f05c61.png)
-
-XXXXXXXXXXXXXXXXXXX 
-XXXXXXXXXXXXXXXXXXX 
 
 
 Fvco and Current for different bias currents:
