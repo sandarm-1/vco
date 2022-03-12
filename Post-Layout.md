@@ -167,15 +167,35 @@ The speed would be lower and current consumption would be significantly higher:
 
 
 
+Integration into Caravel
+====
+Caravel pads maximum output frequency is **50MHz**.
+
+Hence we have to divide down the VCO frequency.
+
+Adding 7 or 8 divide-by-2 frequency dividers we can divide the nominal VCO frequency by 128 or 256.
+
+This way we can divide down the ~3GHz down to ~30MHz range which is appropriate for driving out through Caravel pads.
+
+![image](https://user-images.githubusercontent.com/95447782/158037373-de0ad5d7-6734-4ee0-97bd-bf22c06a9ad5.png)
+
+
+Simulation showing the VCO driving a serires of dividers converting the ~3GHz VCO output to ~30MHz.
+
+![image](https://user-images.githubusercontent.com/95447782/158037401-9a68b447-8886-4814-8a9b-a34246a6c81f.png)
+
+
+Layout of VCO with frequency dividers for integration into Caravel for MPW5 tapeout:
+
+![image](https://user-images.githubusercontent.com/95447782/158037434-de58479f-fb53-46b5-ac71-cbd7a9dfdfd0.png)
+
+
+
+
 Next steps:
 ====
-* Post-layout design review
-* PSS sims
-* Corner sims (A lot of characterization could be done across corners, however, perhaps could focus now on pipecleaning tapeout process and do corners after that)?
-* Start to prepare for tapeout: put in current test modes, freq dividers, prepare for tapeout, pipeclean, characterize across corners maybe later?
-* Beef up layout tracks that may be carrying high currents (without degrading speed)
-
-
+* Finalize Caravel integration of VCO + dividers.
+* Run sim and pre-checks, complete requirements for MPW5 tapeout.
 
 
 
