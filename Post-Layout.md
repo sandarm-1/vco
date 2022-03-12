@@ -180,7 +180,7 @@ This way we can divide down the ~3GHz down to ~30MHz range which is appropriate 
 ![image](https://user-images.githubusercontent.com/95447782/158037373-de0ad5d7-6734-4ee0-97bd-bf22c06a9ad5.png)
 
 
-Simulation showing the VCO driving a serires of dividers converting the ~3GHz VCO output to ~30MHz.
+Simulation showing the VCO driving a series of dividers converting the ~3GHz VCO output to ~30MHz.
 
 ![image](https://user-images.githubusercontent.com/95447782/158037401-9a68b447-8886-4814-8a9b-a34246a6c81f.png)
 
