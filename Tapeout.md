@@ -13,7 +13,9 @@ The output signals (out_div128_buf and out_div256_buf) are driving out io_out[] 
 
 The option of driving out on gpio_analog[] was discarded in order to avoid driving through the 150 Ohm ESD resistors.
 
-Simulation was run driving 5pF capacitance and output signals were ok.
+Simulation was run driving 5pF capacitance and output signals were ok (VCO output divided by 128 and 256, not the high speed 3GHz VCO output).
+
+A custom frequency divider circuit was designed in order to divide down the >3GHz output from the VCO. This custom divider can take in the >3GHz straight from VCO, said divider can run above 3.5GHz in  post layout sims. Then after that we keep dividing down with more standard dividers and we keep lowering the frequency until we get down to divide-by-128  and 256.
 
 This is the final IP layout including output buffers:
 
