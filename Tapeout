@@ -1,0 +1,26 @@
+# High Speed VCO tapeout in Skywater 130nm using Caravel harness chip
+High Speed VCO tapeout in Skywater 130nm using Caravel harness chip
+
+To be updated with further details.
+
+Final IP layout
+====
+In order to drive the Caravel pads, some extra driver circuitry was added.
+
+Added extra buffers to ensure it can drive the Caravel output pads. Finally the IP will be driving out the VCO frequency divided down by 128 and 256 (so around 30MHz - 15MHz approx) out on io_out[] pads with io_oeb[] hardwired low in Caravel.
+
+The output signals (out_div128_buf and out_div256_buf) are driving out io_out[] pads with corresponding io_oeb[] signals tied to VSS.
+
+The option of driving out on gpio_analog[] was discarded in order to avoid driving through the 150 Ohm ESD resistors.
+
+Simulation was run driving 5pF capacitance and output signals were ok.
+
+This is the final IP layout including output buffers:
+
+
+
+- Created project in Efabless, pulled Git and run MPW Precheck on Efabless platform, and it passed!
+------
+The design called "DP5" (design details [here](https://github.com/powergainer/vco/blob/main/Initial_design_investigation.md)) was looking promising in Pre-Layout simulations reaching around 4.1GHz @ 0.9V Vctrl.
+
+However when we implemented the layout and run the first post-layout simulations we saw that the frequency dropped to around 1.5GHz. That was a huge drop.
