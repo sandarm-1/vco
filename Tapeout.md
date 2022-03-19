@@ -36,13 +36,11 @@ This is the final Caravel GDS with the High Speed VCO IP:
 
 Acknowledgements
 ------
-* Kunal Ghosh, co-founder of VLSI System Design.
-* Dr Javed S Gaggatur
+* Kunal Ghosh, co-founder of VLSI System Design. https://www.vlsisystemdesign.com/
+* Dr Javed S Gaggatur, https://scholar.google.com/citations?user=M38WZaQAAAAJ
 
 Contact
 -----
 * Darío San Martín Molina (Author), Analog/Mixed-Signal IC Design Engineer. https://www.linkedin.com/in/dar%C3%ADo-s-a220a914/ 
 
 
-
-However when we implemented the layout and run the first post-layout simulations we saw that the frequency dropped to around 1.5GHz. That was a huge drop.
