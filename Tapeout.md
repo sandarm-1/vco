@@ -36,7 +36,7 @@ This is the final Caravel GDS with the High Speed VCO IP:
 
 Acknowledgements
 ------
-* Kunal Ghosh, co-founder of VLSI System Design. https://www.vlsisystemdesign.com/
+* Mr Kunal Ghosh, co-founder of VLSI System Design. https://www.vlsisystemdesign.com/
 * Dr Javed S Gaggatur, https://scholar.google.com/citations?user=M38WZaQAAAAJ
 
 Contact
