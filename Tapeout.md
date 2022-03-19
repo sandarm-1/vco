@@ -1,4 +1,4 @@
-# High Speed VCO tapeout in Skywater 130nm using Caravel harness chip
+# High Speed VCO tapeout in Google-Skywater 130nm using Caravel harness chip
 High Speed VCO tapeout in Skywater 130nm using Caravel harness chip
 
 
