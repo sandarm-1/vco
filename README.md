@@ -22,6 +22,40 @@ Key features
 
 
 
+|		|	min	|	typ	|	max	|	Units	|	Conditions
+|	------------	|	------------	|	------------	|	------------	|	------------	|	------------
+|	Supply voltage	|	1.62	|	1.8	|	1.98	|	V	|	
+|		|		|		|		|		|	
+|	Fvco	|		|	2.68	|		|	GHz	|	@ 0.9V Vctrl, x0.125 bias mode
+|		|		|	3.21	|		|	GHz	|	@ 0.9V Vctrl, x0.25 bias mode
+|		|		|	3.46	|		|	GHz	|	@ 0.9V Vctrl, x0.5 bias mode
+|		|		|	3.72	|		|	GHz	|	@ 0.9V Vctrl, x1 bias mode
+|		|		|	3.94	|		|	GHz	|	@ 0.9V Vctrl, x2 bias mode
+|		|		|		|		|		|	
+|	Supply current (VCO)	|		|	329.8	|		|	uA rms	|	@ 0.9V Vctrl, x0.125 bias mode
+|		|		|	393.6	|		|	uA rms	|	@ 0.9V Vctrl, x0.25 bias mode
+|		|		|	425.9	|		|	uA rms	|	@ 0.9V Vctrl, x0.5 bias mode
+|		|		|	449.4	|		|	uA rms	|	@ 0.9V Vctrl, x1 bias mode
+|		|		|	464.0	|		|	uA rms	|	@ 0.9V Vctrl, x2 bias mode
+|		|		|		|		|		|	
+|	Kvco	|		|	9.31	|		|	GHz/V	|	@ 0.9V Vctrl, x0.125 bias mode
+|		|		|	9.94	|		|	GHz/V	|	@ 0.9V Vctrl, x0.25 bias mode
+|		|		|	8.78	|		|	GHz/V	|	@ 0.9V Vctrl, x0.5 bias mode
+|		|		|	8.78	|		|	GHz/V	|	@ 0.9V Vctrl, x1 bias mode
+|		|		|	6.79	|		|	GHz/V	|	@ 0.9V Vctrl, x2 bias mode
+|		|		|		|		|		|	
+|	Area	|		|	0.3	|		|	mm^2	|	VCO only
+|		|		|	0.5	|		|	mm^2	|	Frequency dividers (10 instances)
+|		|		|		|		|		|	
+|	Noise	|		|		|		|		|	
+|		|		|		|		|		|	
+
+
+
+
+
+
+
 
 
 CS-VCO
