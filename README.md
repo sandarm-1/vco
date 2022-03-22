@@ -1,5 +1,28 @@
-# vco
-High Speed VCO in Skywater 130nm
+# >3GHz High Speed VCO
+High Speed VCO in Google-Skywater 130nm process
+
+![image](https://user-images.githubusercontent.com/95447782/157235442-8e23a6d5-e405-4849-9bee-2820ed8d502b.png)
+
+![image](https://user-images.githubusercontent.com/95447782/159536411-3104660e-a312-41c9-ad33-6c2830ce608c.png)
+
+![image](https://user-images.githubusercontent.com/95447782/159129021-774e9976-ce00-4699-9d40-47be3756df81.png)
+
+
+
+Key features
+===
+* \> 3GHz VCO output frequency
+* 1.8V supply
+* Programmable bias current modes
+* Custom VCO layout to minimize parasitics and achieve high frequency (link to post-layout)
+* Custom high speed frequency divider for >3.5GHz operation
+* Area 0.3mm^2 (VCO) + 0.5mm^2 (10 Frequency dividers) 
+* Taped out in Google-Skywater 130nm process
+
+
+
+
+
 
 CS-VCO
 ====
