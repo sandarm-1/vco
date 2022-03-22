@@ -79,6 +79,20 @@ More information on details about Google-Skywater 130nm technology and PDK and t
 
 
 
+References
+====
+[1] Hsieh, Ming-Ta & Sobelman, Gerald. (2006). “Comparison of LC and Ring VCOs for PLLs in a 90 nm Digital CMOS Process”.
+
+[2] S. Suman, K. G. Sharma and P. K. Ghosh, "Analysis and design of current starved ring VCO," 2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), 2016, pp. 3222-3227.
+
+[3] B. Goyal, S. Suman and P. K. Ghosh, "Design and analysis of improved performance ring VCO based on differential pair configuration," 2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), 2016.
+
+[4] J. S. Gaggatur, "On-chip Temperature Compensated 2.5GHz to 10GHz Multi-band LC-VCO Phase Locked Loop for Wireline Applications," 2019 IEEE MTT-S International Microwave and RF Conference (IMARC), 2019, pp. 1-5.
+
+[5] J. S. Gaggatur, "A 1.8 – 6.3 GHz Quadrature Ring VCO-based Fast-settling PLL for Wireline I/O in 55nm CMOS," 2021 34th International Conference on VLSI Design and 2021 20th International Conference on Embedded Systems (VLSID), 2021, pp. 294-298.
+
+
+
 
 Acknowledgements
 ===
