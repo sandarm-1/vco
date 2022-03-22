@@ -212,7 +212,7 @@ Output waveform for DP5 at 4.11GHz at 0.9V Vctrl:
 
 Fvco Vs Vctrl for DP5:
 ===
-This is Fvco Vs Vctrl for the design point called DP5, versus previous design iterations (to see the evolution through the design optimization process):
+This is Fvco Vs Vctrl for the design point called DP5, versus previous design iterations (to see the evolution through the design optimization process). Please note these results are pre-layout results without parasitic capacitances and are therefore expected to drop after we implement the layout, however these serve as the initial guidance.
 ![image](https://user-images.githubusercontent.com/95447782/153836578-7e8d3f68-c3d2-4058-b8eb-e5fe2080424e.png)
 
 Supply current:
@@ -224,7 +224,7 @@ Kvco:
 
 **Notes / Further work:**
 * These are pre-layout numbers. Will come down with post-layout extraction.
-* This frequency is achieved with a load on the output of the VCO that represents a divide-by-two circuit that would be present as part of the feedback in a PLL system.
+* This frequency is achieved with a load on the output of the VCO that represents a divide-by-two circuit that would be present as part of the feedback in a PLL system as well as clock buffers that would buffer the clock downstream.
 * In current design, oscillator needs Vctrl higher than 0.8V to oscillate. Limiting factor here is vco core internal node voltage swing too low when delay cells are current starved.
 
 
