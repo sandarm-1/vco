@@ -63,8 +63,12 @@ Simulation results
 * [Pre-layout](/Pre-Layout/Initial_design_investigation.md)
 * [Post-layout](/Post-Layout/Post-Layout.md)
 
+Tape-out in Skywater 130nm Caravel harness chip
+====
+* [Tape-out of High Speed VCO in Skywater 130nm Caravel harness chip](/Tape-out/Tapeout.md)
 
-Introduction to Skywater 130nm technology and PDK:
+
+Methodology: Skywater 130nm technology PDK and EDA tools
 ====
 The design methodology used in this projects is based on the Skywater 130nm PDK and open-source EDA toolflow.
 
@@ -73,8 +77,16 @@ More information on details about Google-Skywater 130nm technology and PDK and t
 [VSDIAT Skywater 130nm Physical Verification Workshop](https://github.com/powergainer/VSDIAT_Physical_Verification_Sky130)
 
 
-Project plan and MPW shuttle schedules:
-===
 
+
+
+Acknowledgements
+===
+* Mr Kunal Ghosh, co-founder of VLSI System Design. https://www.vlsisystemdesign.com/
+* Dr Javed S Gaggatur, https://scholar.google.com/citations?user=M38WZaQAAAAJ
+
+Contact
+===
+* Darío San Martín Molina (Author), Analog/Mixed-Signal IC Design Engineer. https://www.linkedin.com/in/dar%C3%ADo-s-a220a914/ 
 
 
