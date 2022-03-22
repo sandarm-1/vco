@@ -1,9 +1,38 @@
-# vco
-High Speed VCO in Skywater 130nm
+# Initial design investigation
+This section covers the first design investigation for the High Speed VCO in Skywater 130nm.
 
-CS-VCO
+
+Design scope
 ====
-5-stage vs 3-stage
+The scope of the work is to design a high speed VCO that can run in the GHz range (1.6 – 3.2GHz) with relatively low power consumption and low area.
+
+A Phase Locked Loop (PLL) using this VCO in combination with appropriate frequency divider ratios can  generate a range of output frequencies up to 3.2GHz.
+
+The design is to be implemented in 130nm CMOS technology.
+
+![3p2GHz_PLL_diagram](https://user-images.githubusercontent.com/95447782/159557928-4e36689b-07c1-43bc-99af-7f9a7e779c6d.png)
+
+
+
+VCO architecture
+====
+A detailed [literature survey](/VCO_PLL_Literature_Survey.docx) was conducted where we analyzed a large body of relevant papers in the VCO and PLL space.
+
+Two of the main topologies used for VCO design are LC-VCO and Ring Oscillators. LC-VCOs tend to have low noise/jitter performance, but usually require more area due to the passive integrated inductors, and they have a narrower tuning range. Ring oscillators usually require less area, less power and have a wider tuning range at the expense of worse phase noise and jitter. [\[1\]](https://www.researchgate.net/publication/228864712_Comparison_of_LC_and_Ring_VCOs_for_PLLs_in_a_90_nm_Digital_CMOS_Process)
+For this design we chose to implement a ring VCO. Delay stages can be either current starved inverters [\[2\]](https://ieeexplore.ieee.org/document/7755299), differential to single ended [\[3\]](https://ieeexplore.ieee.org/document/7755348) or differential cross-coupled delay stages [\[5\]](https://ieeexplore.ieee.org/document/9407468).
+
+
+Current-starved VCO
+====
+The differential topology can bring some advantages, such as quadrature output generation or the ability to provide full voltage swing on the VCO outputs which may benefit high speed operation as the near rail-to-rail voltage can charge the capacitive load on the VCO provided by subsequent stages like the frequency divider in the PLL feedback loop, possibly at the expense of a higher power consumption.
+
+However at the end we settle for current-starved single ended delay cells VCO topology due to design simplicity, potential for lower current consumption (less switching devices) and we don't need quadrature outputs.
+
+After deciding on a circuit topology we perform initial design space exploration and we systematically narrow down the design variables to get to our target performance.
+
+
+
+Effect of Nstages: 5-stage vs 3-stage
 ------
 Higher frequency can be achieved with 3 stages rather than 5 stages.
 
@@ -18,7 +47,7 @@ Supply current (rms) vs Vctrl for 3 vs 5 stages:
 From now on we focus on 3 stages.
 
 
-Increasing current mirror ratio:
+VCO frequency vs current mirror ratio:
 ------
 Mirror ratio increased from 1.29 to 1.6 to 2.4
 
@@ -56,7 +85,7 @@ Hence increasing current mirror ratio can help increase frequency and Kvco.
 
 
 
-Increasing delay cell inverter drive strength:
+Sensitivity to delay cell inverter drive strength:
 -----
 For a fixed mirror ratio, we show the effect of changing delay cell inverter drive strength (0.18um L vs 0.15um L).
 
@@ -70,11 +99,12 @@ Increasing delay cell inverters drive strength (reducing L from 0.18u to 0.15u)
 
 Takeaway:
 Making inverters minimum length can benefit high frequency operation.
+The reason is low capacitance on critical nodes of ring oscillator.
 Frequency goes up significantly.
 But duty cycle starts to distort.
 And peak to peak swing goes down significantly (specially if mirror ratio also increased).
 
-Leakage not much of a concern since top and bottom mirror devices are 0.18um length.
+Leakage not much of a concern since top and bottom stacked mirror devices are not minimum length.
 
 
 
@@ -192,7 +222,7 @@ Kvco:
 
 
 
-Loss of oscillation at low Vctrl:
+Extending oscillation range to lower Vctrl values:
 ---
 At Vctrl < 0.8V, oscillation lost. Limiting factor here is vco core internal node voltage swing too low when delay cells are current starved.
 
@@ -212,10 +242,10 @@ This is Vctrl = 0.7V, node10 voltage swing too low to trigger next inverter (net
 
 
 How to fix (to recover oscillation at Vctrl < 0.8V):
-* More current in current mirrors?
-* Min length current mirror devices (less resistive)?
-* Swing recovery techniques? (circuit topology change)
+* More current in current mirrors
+* Less resistive current mirror devices
+* Swing recovery techniques (circuit topology change)
 
 How to hack/workaround:
-* Voltage shifting before Vctrl? Create Vctrl_2 = Vctrl + delta,  or Vctrl_2 = a * Vctrl + b
-* Just live with it?
+* Voltage shifting before Vctrl: Create Vctrl_2 = Vctrl + delta,  or Vctrl_2 = a * Vctrl + b
+* Just live with it? This may be acceptable as a trade-off depending on system requirements
