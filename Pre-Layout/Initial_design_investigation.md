@@ -28,8 +28,15 @@ The differential topology can bring some advantages, such as quadrature output g
 
 However at the end we settle for current-starved single ended delay cells VCO topology due to design simplicity, potential for lower current consumption (less switching devices) and we don't need quadrature outputs.
 
-After deciding on a circuit topology we perform initial design space exploration and we systematically narrow down the design variables to get to our target performance.
+![image](https://user-images.githubusercontent.com/95447782/159561923-18572ea0-3958-446a-80d0-dfd113818a06.png)
+Current-starved ring VCO [\[2\]](https://ieeexplore.ieee.org/document/7755299)
 
+
+Design methodology
+====
+After deciding on a circuit topology we perform initial **design space exploration** and we **systematically narrow down the design variables** to get to our target performance. If during the design process we were to encounter limitations with this topology that prevented us from reaching the target specs, we would consider going back and evaluating another circuit topology.
+
+This type of **bottom-up design approach** is an effective way to build a good understanding of the circuit and the relationships that govern its behaviour. From here, a systematic **top-down** design approach can be derived, eventually deriving what could be considered a **design recipe** that would allow the effective design and optimization of the VCO or PLL circuit to a certain performance specification.
 
 
 Effect of Nstages: 5-stage vs 3-stage
