@@ -54,14 +54,14 @@ Key features
 
 Design files
 ====
-* Schematics
-* Layout
-* GDS
+* [Schematics](https://github.com/powergainer/caravel_user_project_analog_vco/tree/main/xschem)
+* [Layout](https://github.com/powergainer/caravel_user_project_analog_vco/tree/main/mag)
+* [GDS](https://github.com/powergainer/caravel_user_project_analog_vco/tree/main/gds)
 
 Simulation results
 ====
-* Pre-layout
-* Post-layout
+* [Pre-layout](/Pre-Layout/Initial_design_investigation.md)
+* [Post-layout](/Post-Layout/Post-Layout.md)
 
 
 Introduction to Skywater 130nm technology and PDK:
@@ -70,7 +70,7 @@ The design methodology used in this projects is based on the Skywater 130nm PDK 
 
 More information on details about Google-Skywater 130nm technology and PDK and the open-source EDA toolflow can be found here:
 
-VSDIAT Skywater 130nm Physical Verification Workshop
+[VSDIAT Skywater 130nm Physical Verification Workshop](https://github.com/powergainer/VSDIAT_Physical_Verification_Sky130)
 
 
 Project plan and MPW shuttle schedules:
