@@ -1,7 +1,7 @@
 # 3GHz High Speed VCO
 High Speed VCO in Google-Skywater 130nm process
 
-![image](https://user-images.githubusercontent.com/95447782/157235442-8e23a6d5-e405-4849-9bee-2820ed8d502b.png)
+![image](https://user-images.githubusercontent.com/95447782/159545975-644caf80-5cb7-410d-9a74-c7f3799e71a4.png)
 
 ![image](https://user-images.githubusercontent.com/95447782/159536411-3104660e-a312-41c9-ad33-6c2830ce608c.png)
 
@@ -73,7 +73,7 @@ More information on details about Google-Skywater 130nm technology and PDK and t
 VSDIAT Skywater 130nm Physical Verification Workshop
 
 
-Project plan and shuttle schedules:
+Project plan and MPW shuttle schedules:
 ===
 
 
