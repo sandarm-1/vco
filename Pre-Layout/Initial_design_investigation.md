@@ -24,9 +24,7 @@ For this design we chose to implement a ring VCO. Delay stages can be either cur
 
 Current-starved VCO
 ====
-The differential topology can bring some advantages, such as quadrature output generation or the ability to provide full voltage swing on the VCO outputs which may benefit high speed operation as the near rail-to-rail voltage can charge the capacitive load on the VCO provided by subsequent stages like the frequency divider in the PLL feedback loop, possibly at the expense of a higher power consumption.
-
-However at the end we settle for current-starved single ended delay cells VCO topology due to design simplicity, potential for lower current consumption (less switching devices) and we don't need quadrature outputs.
+We decide to go for current-starved single ended delay cells VCO topology due to design simplicity, potential for lower current consumption (less switching devices compared to differential topology) and the fact that we don't need quadrature outputs.
 
 ![image](https://user-images.githubusercontent.com/95447782/159561923-18572ea0-3958-446a-80d0-dfd113818a06.png)
 Current-starved ring VCO [\[2\]](https://ieeexplore.ieee.org/document/7755299)
