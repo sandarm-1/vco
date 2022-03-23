@@ -1,4 +1,4 @@
-# 3GHz High Speed VCO
+# 3GHz High Speed VCO in Skywater 130nm process
 High Speed VCO in Google-Skywater 130nm process.
 
 The scope of the work is to design a high speed VCO that can run in the GHz range (1.6 – 3.2GHz) with relatively low power consumption and low area.
