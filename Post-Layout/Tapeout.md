@@ -31,6 +31,8 @@ High Speed VCO IP taped out in Caravel Skywater 130nm harness chip
 ====
 After passing all prechecks both locally and in Efabless platform, the chip is taped out.
 
+The tape-out repository can be found [here](https://github.com/powergainer/caravel_user_project_analog_vco).
+
 This is the final Caravel GDS with the High Speed VCO IP:
 
 ![Caravel_GDS_with_VCO_taped_out](https://user-images.githubusercontent.com/95447782/159129021-774e9976-ce00-4699-9d40-47be3756df81.png)
