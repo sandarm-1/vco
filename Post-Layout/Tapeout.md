@@ -38,6 +38,16 @@ This is the final Caravel GDS with the High Speed VCO IP:
 ![Caravel_GDS_with_VCO_taped_out](https://user-images.githubusercontent.com/95447782/159129021-774e9976-ce00-4699-9d40-47be3756df81.png)
 
 
+Further work
+------
+There are many opportunities for further work, investigation and optimization in areas that were not possible to cover within the time constraints of this project. Some ideas are:
+
+* Full characterization across PVT corners.
+* Layout improvements: dummies, guardrings, make devices mutiples of the same unit device everywhere possible, put in deep nwell for noise isolation, review track widths to withstand high currents, electromigration, IR drop, etc.
+* Optimize circuit for noise performance. This is currently a limitation of open source tools (ngspice doesn’t support pnoise).
+* Add a V to I circuit at input of VCO.
+
+
 Acknowledgements
 ------
 * Mr Kunal Ghosh, co-founder of VLSI System Design. https://www.vlsisystemdesign.com/
