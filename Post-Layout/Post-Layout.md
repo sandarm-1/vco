@@ -165,6 +165,10 @@ The speed would be lower and current consumption would be significantly higher:
 ![VCO_large_devices_LVT_pre-layout](https://user-images.githubusercontent.com/95447782/157236440-a8b8dea9-118f-400b-9160-c69509caa16a.png)
 
 
+Also we don't consider this design necessarily optimal. Making devices artificially larger than needed would have its own drawbacks, especially for high frequency. Every time we double W and L we make the Cgs 4x larger, which means power consumption (current required to charge this cap) goes up, causing more heating, which wouldn't be a positive in terms of reliability, and obviously total power consumption. An important factor for reliability would be to ensure our devices operate within a safe operating area (SOA). This could be confirmed with an SOA simulation and/or lifetime simulations.
+
+
+
 
 
 
@@ -190,8 +194,9 @@ Simulation showing the VCO driving a series of dividers converting the ~3GHz VCO
 
 Layout of VCO with frequency dividers for integration into Caravel for MPW5 tapeout:
 
-![image](https://user-images.githubusercontent.com/95447782/158037434-de58479f-fb53-46b5-ac71-cbd7a9dfdfd0.png)
+![image](https://user-images.githubusercontent.com/95447782/159696173-123c8668-bcf4-4a60-b714-baee2025f142.png)
 
+The first frequency divider, right after the >3GHz VCO output, is a custom frequency divider designed to take in frequencies higher than 3.5GHz. Post-layout simulations of this divider show that it can operate near the 4GHz range.
 
 
 
