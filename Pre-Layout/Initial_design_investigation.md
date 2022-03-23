@@ -254,3 +254,8 @@ How to fix (to recover oscillation at Vctrl < 0.8V):
 How to hack/workaround:
 * Voltage shifting before Vctrl: Create Vctrl_2 = Vctrl + delta,  or Vctrl_2 = a * Vctrl + b
 * Just live with it? This may be acceptable as a trade-off depending on system requirements
+
+Next steps
+---
+* Create preliminary VCO  layout, extract and run simulation with parasitic components. See frequency drop due to parasitics, back-annotate parasitic caps into schematic sims, iterate design.
+* See [DP9 schematic simulation results](/Pre-Layout/Schematic_simulation_results_dp9.md)
