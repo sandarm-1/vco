@@ -4,7 +4,7 @@ All results typical corner and VDD=1.8V unless otherwise stated.
 
 First VCO layout and initial post-layout simulation results
 ====
-"DP5" design was not good enough after post-layout:
+"DP5" design was not good enough after post-layout extraction:
 ------
 The design called "DP5" (design details [here](/Pre-Layout/Initial_design_investigation.md)) was looking promising in Pre-Layout simulations reaching around 4.1GHz @ 0.9V Vctrl.
 
@@ -94,6 +94,8 @@ Layout of VCO with 1 current-starved cell (DP9 - including programmable current 
 
 Post-Layout sim results (VCO with 1 current-starved cell, DP9, with programmable bias currents)
 ---------------
+Extracted post-layout simulation results for the updated design are shown below. For a comparison between schematic (pre-layout estimates with back-annotated parasitic caps) and extracted (post-layout) results for this design point, see [pre-layout estimates vs post-layout results for DP9 VCO](/Post-Layout/Pre-layout_estimates_vs_post-layout_results_dp9.md).
+
 Plan is to tapeout with current scaling options so we will have both high current - high speed options and lower current - lower speed options.
 
 The final programmable bias current settings are as follows:
