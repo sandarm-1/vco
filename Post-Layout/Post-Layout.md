@@ -196,6 +196,7 @@ Next steps:
 ====
 * Finalize Caravel integration of VCO + dividers.
 * Run sim and pre-checks, complete requirements for MPW5 tapeout.
+* Actions completed - See [Tapeout](/Post-Layout/Tapeout.md) details.
 
 
 
