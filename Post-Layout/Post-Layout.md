@@ -107,7 +107,8 @@ The final programmable bias current settings are as follows:
 
 These are post-layout results Fvco and supply current versus programmable current modes:
 
-![image](https://user-images.githubusercontent.com/95447782/157235442-8e23a6d5-e405-4849-9bee-2820ed8d502b.png)
+![image](https://user-images.githubusercontent.com/95447782/159693245-e04fc65c-b5fe-4d00-9a81-7a24189e1221.png)
+
 
 
 VCO output waveform for DP9 post-layout, 3.731GHz at 0.9V Vctrl.
