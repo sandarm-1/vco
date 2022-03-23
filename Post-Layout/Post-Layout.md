@@ -6,7 +6,7 @@ First VCO layout and initial post-layout simulation results
 ====
 "DP5" design was not good enough after post-layout:
 ------
-The design called "DP5" (design details [here](https://github.com/powergainer/vco/blob/main/Initial_design_investigation.md)) was looking promising in Pre-Layout simulations reaching around 4.1GHz @ 0.9V Vctrl.
+The design called "DP5" (design details [here](/Pre-Layout/Initial_design_investigation.md)) was looking promising in Pre-Layout simulations reaching around 4.1GHz @ 0.9V Vctrl.
 
 However when we implemented the layout and run the first post-layout simulations we saw that the frequency dropped to around 1.5GHz. That was a huge drop.
 
