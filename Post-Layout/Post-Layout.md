@@ -194,7 +194,7 @@ Simulation showing the VCO driving a series of dividers converting the ~3GHz VCO
 
 Layout of VCO with frequency dividers for integration into Caravel for MPW5 tapeout:
 
-![image](https://user-images.githubusercontent.com/95447782/159696173-123c8668-bcf4-4a60-b714-baee2025f142.png)
+![image](https://user-images.githubusercontent.com/95447782/159696910-3d8227a9-3ad8-410e-8dc5-37415e2ea06d.png)
 
 The first frequency divider, right after the >3GHz VCO output, is a custom frequency divider designed to take in frequencies higher than 3.5GHz. Post-layout simulations of this divider show that it can operate near the 4GHz range.
 
