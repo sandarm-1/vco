@@ -16,7 +16,7 @@ The design is to be implemented in 130nm CMOS technology.
 
 VCO architecture
 ====
-A detailed [literature survey](/VCO_PLL_Literature_Survey.docx) was conducted where we analyzed a large body of relevant papers in the VCO and PLL space.
+A detailed [literature survey](/Pre-Layout/VCO_PLL_Literature_Survey.docx) was conducted where we analyzed a large body of relevant papers in the VCO and PLL space.
 
 Two of the main topologies used for VCO design are LC-VCO and Ring Oscillators. LC-VCOs tend to have low noise/jitter performance, but usually require more area due to the passive integrated inductors, and they have a narrower tuning range. Ring oscillators usually require less area, less power and have a wider tuning range at the expense of worse phase noise and jitter. [\[1\]](https://www.researchgate.net/publication/228864712_Comparison_of_LC_and_Ring_VCOs_for_PLLs_in_a_90_nm_Digital_CMOS_Process)
 For this design we chose to implement a ring VCO. Delay stages can be either current starved inverters [\[2\]](https://ieeexplore.ieee.org/document/7755299), differential to single ended [\[3\]](https://ieeexplore.ieee.org/document/7755348) or differential cross-coupled delay stages [\[5\]](https://ieeexplore.ieee.org/document/9407468).
