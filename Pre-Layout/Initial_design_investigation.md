@@ -258,4 +258,4 @@ How to hack/workaround:
 Next steps
 ---
 * Create preliminary VCO  layout, extract and run simulation with parasitic components. See frequency drop due to parasitics, back-annotate parasitic caps into schematic sims, iterate design.
-* See [DP9 schematic simulation results](/Pre-Layout/Schematic_simulation_results_dp9.md)
+* Action completed - See [Post-layout simulation results](/Post-Layout/Post-Layout.md)
