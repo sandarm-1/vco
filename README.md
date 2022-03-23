@@ -1,5 +1,11 @@
 # 3GHz High Speed VCO
-High Speed VCO in Google-Skywater 130nm process
+High Speed VCO in Google-Skywater 130nm process.
+
+The scope of the work is to design a high speed VCO that can run in the GHz range (1.6 – 3.2GHz) with relatively low power consumption and low area.
+
+A Phase Locked Loop (PLL) using this VCO in combination with appropriate frequency divider ratios can  generate a range of output frequencies up to 3.2GHz.
+
+The design is to be implemented in 130nm CMOS technology.
 
 ![image](https://user-images.githubusercontent.com/95447782/159545975-644caf80-5cb7-410d-9a74-c7f3799e71a4.png)
 
