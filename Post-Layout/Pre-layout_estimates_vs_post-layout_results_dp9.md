@@ -1,5 +1,5 @@
 # DP9 VCO pre-layout estimates vs post-layout results
-This section covers the results for the optimized VCO design "DP9", comparing the estimates from pre-layout simulations with back-annotated parasitic caps and post-layout results after implementing the updated and optimized layout.
+While the main focus should be on post-layout results, as those are the numbers that will more accurately reflect silicon performance, this section shows a comparison between the estimates from pre-layout simulations with back-annotated parasitic caps and post-layout results after implementing the updated and optimized layout for the optimized VCO design "DP9".
 
 
 DP9 VCO schematic simulations, pre-layout estimates with annotated parasitic cap estimates from preliminary layout:
