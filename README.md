@@ -14,7 +14,7 @@ Key features
 * \> 3GHz VCO output frequency
 * 1.8V supply
 * Programmable bias current modes
-* Custom VCO layout to minimize parasitics and achieve high frequency ([link])(/Post-Layout/Post-Layout.md)
+* Custom VCO layout to minimize parasitics and achieve high frequency ([link](/Post-Layout/Post-Layout.md))
 * Custom high speed frequency divider for >3.5GHz operation
 * Area 0.3mm^2 (VCO) + 0.5mm^2 (10 Frequency dividers) 
 * Taped out in Google-Skywater 130nm process
