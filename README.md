@@ -16,7 +16,7 @@ Key features
 * Programmable bias current modes
 * Custom VCO layout to minimize parasitics and achieve high frequency ([link](/Post-Layout/Post-Layout.md))
 * Custom high speed frequency divider for >3.5GHz operation
-* Area 0.3mm^2 (VCO) + 0.5mm^2 (10 Frequency dividers) 
+* Area 0.00034mm^2 (VCO) + 0.00050mm^2 (10 Frequency dividers) 
 * Taped out in Google-Skywater 130nm process
 
 
@@ -44,8 +44,8 @@ Key features
 |		|		|	8.78	|		|	GHz/V	|	@ 0.9V Vctrl, x1 bias mode	|
 |		|		|	6.79	|		|	GHz/V	|	@ 0.9V Vctrl, x2 bias mode	|
 |		|		|		|		|		|		|
-|	Area	|		|	0.3	|		|	mm^2	|	VCO only	|
-|		|		|	0.5	|		|	mm^2	|	Frequency dividers (10 instances)	|
+|	Area	|		|	0.00034	|		|	mm^2	|	VCO only	|
+|		|		|	0.00050	|		|	mm^2	|	Frequency dividers (10 instances)	|
 |		|		|		|		|		|		|
 |	Noise	|		|		|		|		|		|
 |		|		|		|		|		|		|
